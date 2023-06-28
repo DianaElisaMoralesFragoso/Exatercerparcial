@@ -1,0 +1,282 @@
+-----------------------Creacion de Tablas 1,2,3-------------------------------------------------------------
+create table Products (
+id number (20),
+nombre nvarchar2 (40),
+precio float (20),
+num_Tip number (20),
+num_mar number (20));
+
+create table Tip (
+id number (20),
+Tip nvarchar2 (20));
+
+create table Marc (
+id number (20),
+Marc nvarchar2(20));
+
+--------------------------Products-----------------
+
+/*Panaderia*/
+insert into Products values (1,'Nito',15,2,1); 
+insert into Products values (2,'Pinguinos',20,2,5);
+insert into Products values (3,'Gansito',17,2,5);
+insert into Products values (4,'Bimbuñuelos',20,2,1);
+insert into Products values (5,'Donas espolvoreadas',21,2,1);
+insert into Products values (6,'Mantecadas',25,2,1);
+insert into Products values (7,'Donas azucaradas',18,2,1);
+insert into Products values (8,'Panque de nuez',38,2,1);
+insert into Products values (9,'Chocorroles',22,2,5);
+insert into Products values (10,'Dalmata',12,2,5);
+insert into Products values (11,'Roles de canela',24,2,1);
+insert into Products values (12,'Crossantines choco',15,2,1);
+insert into Products values (13,'Panque napolitano',22,2,5);
+insert into Products values (14,'Panque de pasas',35,2,1);
+insert into Products values (15,'Roles con glaseado',26,2,1);
+
+/*Sodas y Agua*/
+insert into Products values (16,'Del valle frut',15,1,3);
+insert into Products values (17,'Coca cola',16,1,3);
+insert into Products values (18,'Coca cola rosalia',20,1,3);
+insert into Products values (19,'Sidral',17,1,3);
+insert into Products values (20,'Coca cola de cereza',20,1,3);
+insert into Products values (21,'Agua purificada',15,1,3);
+insert into Products values (22,'Fanta',15,1,3);
+insert into Products values (23,'Sprite',15,1,3);
+
+/*Papas*/
+insert into Products values (24,'Chetos flamit hot',15,3,2);
+insert into Products values (25,'Paketaxo flamit hot',25,3,2);
+insert into Products values (26,'Doritos nachos',20,3,2);
+insert into Products values (27,'Chetos torciditos',17,3,2);
+insert into Products values (28,'Chetos colmillos',18,3,2);
+insert into Products values (29,'Runners',18,3,4);
+insert into Products values (30,'Takis amarillos',20,3,2);
+insert into Products values (31,'Chetos bolita',15,3,2);
+insert into Products values (32,'Fritos chipotle',17,3,2);
+insert into Products values (33,'Papatinas jalapeño',15,3,4);
+insert into Products values (34,'Pop',20,3,4);
+insert into Products values (35,'Paketaxo queso',25,3,2);
+insert into Products values (36,'Papatinas fuego',15,3,4);
+insert into Products values (37,'Sabritas naturales',18,3,2);
+insert into Products values (38,'Sabritas abobadas',18,3,2);
+insert into Products values (39,'Rufles original',18,3,2);
+insert into Products values (40,'Crujitos',18,3,2);
+insert into Products values (41,'Churrumais',15,3,2);
+insert into Products values (42,'Sabritas receta crujiente',18,3,2);
+insert into Products values (43,'Takis fuego',18,3,2);
+insert into Products values (44,'Doritos diablo',18,3,2);
+insert into Products values (45,'Chips fuego',15,3,4);
+insert into Products values (46,'Toreadas',20,3,4);
+insert into Products values (47,'Takis guacamole',20,3,2);
+insert into Products values (48,'Doritos incognita',18,3,2);
+insert into Products values (49,'Chips jalapeño',20,3,4);
+insert into Products values (50,'Chipotles',20,3,4);
+insert into Products values (51,'Big mix',25,3,4);
+insert into Products values (52,'Rufles de queso',18,3,2);
+insert into Products values (53,'Chips naturales',20,3,4);
+insert into Products values (54,'Wapas',20,3,4);
+insert into Products values (55,'Doritos pizzerola',20,3,2);
+insert into Products values (56,'Doritos flamit hot',18,3,2);
+insert into Products values (57,'Rancheritos',17,3,2);
+
+
+/*Botana*/
+insert into Products values (58,'Golden nuts',20,4,4);
+insert into Products values (59,'Cacahuate mafer',23,4,2);
+insert into Products values (60,'Hot nuts',20,4,4);
+insert into Products values (61,'Cacahuates',15,4,4);
+
+
+/*Galletas*/
+insert into Products values (62,'Galletas triki trakes',20,5,5);
+insert into Products values (63,'Emperador de limon',20,5,5);
+insert into Products values (64,'Galletas chokis',20,5,5);
+insert into Products values (65,'Mini rocko',5,5,5);
+insert into Products values (66,'Galletas canelitas',20,5,5);
+insert into Products values (67,'Galletas sponch',22,5,5);
+insert into Products values (68,'Barra de arroz',10,5,1);
+insert into Products values (69,'Rebanadas',12,5,1);
+insert into Products values (70,'Barritas fresa',15,5,5);
+insert into Products values (71,'Galletas polvorones',20,5,5);
+insert into Products values (72,'Galletas principe',20,5,5);
+insert into Products values (73,'Barritas de piña',15,5,5);
+insert into Products values (74,'Emperador de chocolate',20,5,5);
+insert into Products values (75,'Takis Azules',18,3,2);
+
+-----------------Drop de Tablas 1,2,3-------------
+drop table Products;
+drop table Tip;
+drop table Marc;
+
+-----------------Visualizar Tablas 1,2,3---------------------------------
+select * from Products;
+select * from Tip;
+select * from Marc;
+
+
+---------------Insertar Datos sin relacion---------------------------------
+
+insert into Tip values (1,'Regalos');
+insert into Tip values (2,'Vestidos');
+insert into Tip values (3,'Products de limpieza');
+insert into Tip values (4,'Discos');
+insert into Tip values (5,'Boletos');
+
+insert into Marc values (1,'Peluche');
+insert into Marc values (2,'Zara');
+insert into Marc values (3,'Salvo');
+insert into Marc values (4,'Cambios de luna');
+insert into Marc values (5,'Lenny Tavarez');
+
+
+----------------Secuencia--------------------------
+
+create sequence sec_Tip 
+start with 1 increment by 1
+maxvalue 100
+minvalue 1;
+
+drop SEQUENCE sec_Tip;
+drop SEQUENCE sec_Marc;
+
+-------------Trigger----------------------
+create or replace trigger tr_llenar2
+before insert
+on Products
+for each row
+begin
+if: new.num_Tip = 1 then
+    insert into Tip values(sec_Tip.nextval,'Panes');
+    end if;
+if: new.num_Tip = 2 then
+    insert into Tip values(sec_Tip.nextval,'Bebidas');
+    end if;
+if: new.num_Tip = 3 then
+    insert into Tip values(sec_Tip.nextval,'Papas');
+    end if;
+if: new.num_Tip = 4 then
+    insert into Tip values(sec_Tip.nextval,'Comida');
+    end if;
+if: new.num_Tip = 5 then
+    insert into Tip values(sec_Tip.nextval,'Galletas');
+    end if;
+    end;
+    
+-------------Secuencia---------------------------------    
+create sequence sec_Marc 
+start with 1 increment by 1
+maxvalue 100
+minvalue 1;
+----------Trigger-----------
+create or replace trigger tr_llenar3
+before insert
+on Products
+for each row
+begin
+if: new.num_Tip = 1 then
+    insert into Tip values(sec_Tip.nextval,'Panaderia');
+    end if;
+if: new.num_Tip = 2 then
+    insert into Tip values(sec_Tip.nextval,'Soda');
+    end if;
+if: new.num_Tip = 3 then
+    insert into Tip values(sec_Tip.nextval,'Papas');
+    end if;
+if: new.num_Tip = 4 then
+    insert into Tip values(sec_Tip.nextval,'Botana');
+    end if;
+if: new.num_Tip = 5 then
+    insert into Tip values(sec_Tip.nextval,'Galletas');
+    end if;
+    end;
+    
+--------Secuencia------------------------------------    
+create sequence sec_Marc 
+start with 1 increment by 1
+maxvalue 100
+minvalue 1;
+-----------Trigger------------------------------------
+create or replace trigger tr_llenar3
+before insert
+on Products
+for each row
+begin
+if: new.num_mar = 1 then
+    insert into Marc values(sec_Marc.nextval,'Bimbo');
+    end if;
+if: new.num_mar = 2 then
+    insert into Marc values(sec_Marc.nextval,'Jumex');
+    end if;
+if: new.num_mar = 3 then
+    insert into Marc values(sec_Marc.nextval,'Sabritas');
+    end if;
+if: new.num_mar = 4 then
+    insert into Marc values(sec_Marc.nextval,'Botanas');
+    end if;
+if: new.num_mar = 5 then
+    insert into Marc values(sec_Marc.nextval,'Marinela-Gamesa');
+    end if;
+    end;
+    
+    
+
+SELECT Products.Nombre, Products.Precio, Tip.Tip, Marc.Marc
+FROM Products
+FULL JOIN Tip ON Products.Num_Tip = Tip.Id
+FULL JOIN Marc ON Products.Num_mar = Marc.Id;
+
+SELECT Products.Nombre, Marc.Marc
+FROM Products
+INNER JOIN Marc ON Products.id = Marc.Id
+WHERE Marc.Marc = 'Botanas';
+
+
+SELECT * FROM Products LEFT JOIN Tip ON Products.id=Tip.id where Tip.id is null;
+
+SELECT * FROM Products RIGHT JOIN Marc ON Products.id=Marc.id where Products.id is not null;
+
+
+SELECT * FROM Products 
+Full join Tip on Products.id=Tip.id full join Marc on tabla.id=Marc.id where Products.id is null or Tip.id is null;
+
+select * from Products full join Tip on Products.id=Tip.id and Products.nombre=Tip.Tip Full join Marc on Products.id = Marc.id and Products.nombre=Marc.Marc ; 
+
+SELECT Products.Nombre, Products.Precio, Tip.Tip, Marc.Marc
+FROM Products
+JOIN Tip ON Products.Num_Tip = Tip.Id
+JOIN Marc ON Products.Num_mar = Marc.Id
+WHERE Products.Nombre LIKE 'T%';
+
+
+CREATE TABLE TablaImprimirT (
+  Mensaje VARCHAR2(100)
+);
+
+
+--------------LetraT------------------------------------------
+CREATE OR REPLACE TRIGGER tr_letra
+AFTER INSERT ON Products
+FOR EACH ROW
+DECLARE
+  letra VARCHAR2(1);
+BEGIN
+  letra := UPPER(SUBSTR(:NEW.Nombre, 1, 1));
+  IF letra = 'T' THEN
+    INSERT INTO TablaImprimirT (Mensaje) VALUES ('Se insertó un producto con la vitamina T con nombre ' || :NEW.Nombre);
+  END IF;
+END;
+
+
+SELECT *FROM Products;
+SELECT *FROM Tip;
+SELECT *FROM Marc;
+select * from TablaImprimirT;
+
+
+CREATE VIEW Visualizar AS
+SELECT Products.Nombre, Products.Precio, Tip.Tip, Marc.Marc
+FROM Products
+JOIN Tip ON Products.Num_Tip = Tip.Id
+JOIN Marc ON Products.Num_mar = Marc.Id;
+
+SELECT * FROM Visualizar;
